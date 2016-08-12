@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var v2TextField: UITextField!
     
-    var periodicTable = ["H":1,"He":2,"Li":3,"Pi":4,"B":5]
+    var periodicTable = ["H":1.008,"He":4.00260,"Li":6.94,"Be":9.01218,"B":10.81,"C":12.011,"N":14.007,"O":15.999,"F":18.9984,"Ne":20.1797,"Na":22.9897,"Mg":24.305,"Al":26.9815]
     
     func findMolecularWeight(molecular:String?) {
         if let molecularWeight = periodicTable[molecular!]{
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             return
         }
         findMolecularWeight(formulaTextField.text!)
+
     }
 
     

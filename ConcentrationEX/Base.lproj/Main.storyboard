@@ -33,7 +33,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUV-oc-2eb" userLabel="分子式 Stack View">
                                         <rect key="frame" x="160" y="0.0" width="181" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-Zi-Oqt" userLabel="分子式 Text Field">
+                                            <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g H" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-Zi-Oqt" userLabel="分子式 Text Field">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="125" id="AY9-oF-if1"/>
@@ -62,7 +62,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-WV-Eyy" userLabel="M1 Text Field">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-WV-Eyy" userLabel="M1 Text Field">
                                                         <rect key="frame" x="0.0" y="21" width="85" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="85" id="mmq-lm-7u4"/>
@@ -81,7 +81,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAa-Js-0KR" userLabel="V1 text Field">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAa-Js-0KR" userLabel="V1 text Field">
                                                         <rect key="frame" x="0.0" y="21" width="85" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="85" id="PKX-Aj-QNq"/>
@@ -105,7 +105,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tE9-tk-L2q" userLabel="M2 Text Field">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tE9-tk-L2q" userLabel="M2 Text Field">
                                                         <rect key="frame" x="0.0" y="21" width="85" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="85" id="HeN-KO-Vgt"/>
@@ -124,7 +124,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5I-SX-JDZ" userLabel="V2 Text Field">
+                                                    <textField opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5I-SX-JDZ" userLabel="V2 Text Field">
                                                         <rect key="frame" x="0.0" y="21" width="85" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="85" id="ImU-L3-Ubr"/>
