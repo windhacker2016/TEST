@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ConcertrationEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79u-R6-H0S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ConcentrationEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79u-R6-H0S">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Byn-EF-E7c"/>
@@ -27,141 +27,248 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hYo-Wi-XeI" userLabel="Super Stack View">
-                                <rect key="frame" x="50" y="100" width="500" height="222"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="y7u-eW-Jh8" userLabel="Super Stack View">
+                                <rect key="frame" x="50" y="100" width="500" height="431"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUV-oc-2eb" userLabel="分子式 Stack View">
-                                        <rect key="frame" x="160" y="0.0" width="181" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzZ-O2-uC2" userLabel="計算分子量 Stack View">
+                                        <rect key="frame" x="70" y="0.0" width="361" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g H" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-Zi-Oqt" userLabel="分子式 Text Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g H2O" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j35-IU-I5B" userLabel="分子量 Text Field">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="125" id="AY9-oF-if1"/>
+                                                    <constraint firstAttribute="width" constant="300" id="wx7-mG-2cz"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xQ-y6-xgs">
-                                                <rect key="frame" x="125" y="0.0" width="56" height="30"/>
-                                                <state key="normal" title="Formula"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wn5-9Y-AaY" userLabel="計算分子量 Button">
+                                                <rect key="frame" x="300" y="0.0" width="61" height="30"/>
+                                                <state key="normal" title="Caculate"/>
                                                 <connections>
-                                                    <action selector="formula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LsX-ab-T9M"/>
+                                                    <action selector="calculateMW:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVQ-tb-Kvp"/>
+                                                    <action selector="formula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1y-eM-lq7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdX-hf-XzW" userLabel="origin side Stack View">
-                                        <rect key="frame" x="165" y="50" width="170" height="51"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ALk-bX-pfz" userLabel="莫耳濃度公式 Stack View">
+                                        <rect key="frame" x="131" y="80" width="238" height="90"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KVR-5r-0Be" userLabel="Ｍ1 View">
-                                                <rect key="frame" x="0.0" y="0.0" width="85" height="51"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQw-d0-fFV" userLabel="質量 Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-ea-duq">
-                                                        <rect key="frame" x="31" y="0.0" width="23" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWj-aZ-ltt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-WV-Eyy" userLabel="M1 Text Field">
-                                                        <rect key="frame" x="0.0" y="21" width="85" height="30"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qhs-Er-E8N" userLabel="質量 Text Field">
+                                                        <rect key="frame" x="34" y="0.0" width="100" height="30"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="85" id="mmq-lm-7u4"/>
+                                                            <constraint firstAttribute="width" constant="100" id="js1-mb-l0t"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hj4-Cq-Dmz" userLabel="質量單位選項">
+                                                        <rect key="frame" x="134" y="0.0" width="104" height="31"/>
+                                                        <segments>
+                                                            <segment title="ug"/>
+                                                            <segment title="mg"/>
+                                                            <segment title="g"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61k-vi-CxZ" userLabel="分子量 Stack View">
+                                                <rect key="frame" x="0.0" y="30" width="151" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分子量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfq-fS-O8I">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swX-Zg-9vv" userLabel="分子量 Text Field">
+                                                        <rect key="frame" x="51" y="0.0" width="100" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="nRL-79-myg"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D89-sO-Lax" userLabel="V1 Stack View">
-                                                <rect key="frame" x="85" y="0.0" width="85" height="51"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCD-pC-heE" userLabel="體積 Stack View">
+                                                <rect key="frame" x="0.0" y="60" width="223" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V1(L)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWO-pI-wO7">
-                                                        <rect key="frame" x="23" y="0.0" width="40" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="體積" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUk-vG-gGN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAa-Js-0KR" userLabel="V1 text Field">
-                                                        <rect key="frame" x="0.0" y="21" width="85" height="30"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Weg-4f-1kC" userLabel="體積 Text Field">
+                                                        <rect key="frame" x="34" y="0.0" width="100" height="30"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="85" id="PKX-Aj-QNq"/>
+                                                            <constraint firstAttribute="width" constant="100" id="TVH-XP-dHx"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QMg-IV-X4E" userLabel="體積單位選項">
+                                                        <rect key="frame" x="134" y="0.0" width="89" height="31"/>
+                                                        <segments>
+                                                            <segment title="ul"/>
+                                                            <segment title="ml"/>
+                                                            <segment title="L"/>
+                                                        </segments>
+                                                    </segmentedControl>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="471-SZ-59f" userLabel="desired side Stack View">
-                                        <rect key="frame" x="165" y="121" width="170" height="51"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yPx-aO-A5N" userLabel="M2 Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="85" height="51"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zr7-zm-WkX">
-                                                        <rect key="frame" x="30" y="0.0" width="25" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tE9-tk-L2q" userLabel="M2 Text Field">
-                                                        <rect key="frame" x="0.0" y="21" width="85" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="85" id="HeN-KO-Vgt"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dkU-5n-zKf" userLabel="V2 Stack View">
-                                                <rect key="frame" x="85" y="0.0" width="85" height="51"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V2(L)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBw-Hi-Vlu">
-                                                        <rect key="frame" x="22" y="0.0" width="42" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5I-SX-JDZ" userLabel="V2 Text Field">
-                                                        <rect key="frame" x="0.0" y="21" width="85" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="85" id="ImU-L3-Ubr"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khN-Cx-GwP">
-                                        <rect key="frame" x="220" y="192" width="61" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsA-JY-wS1">
+                                        <rect key="frame" x="220" y="220" width="61" height="30"/>
                                         <state key="normal" title="Caculate"/>
                                         <connections>
-                                            <action selector="caculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6F-Ud-1Z0"/>
+                                            <action selector="calculateM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DgQ-fD-NVV"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="la4-aV-mrw" userLabel="濃度換算公式 Stack View">
+                                        <rect key="frame" x="0.0" y="300" width="500" height="51"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNn-tE-muT" userLabel="Orgin side stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="51"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="77P-KC-XqG" userLabel="M1 Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="51"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcx-ga-Inn">
+                                                                <rect key="frame" x="39" y="0.0" width="23" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GN4-M3-klg" userLabel="M1 Text Field">
+                                                                <rect key="frame" x="0.0" y="21" width="100" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="XBU-y3-kKi"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ykI-WM-44U" userLabel="V1 Stack View">
+                                                        <rect key="frame" x="100" y="0.0" width="100" height="51"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daZ-tm-358">
+                                                                <rect key="frame" x="41" y="0.0" width="19" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Mv-QV-uoI" userLabel="V1 Text Field">
+                                                                <rect key="frame" x="0.0" y="21" width="100" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="Yox-Pb-Ad8"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ae-KM-p6M">
+                                                <rect key="frame" x="243" y="22" width="15" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wjo-xQ-Pgc" userLabel="Desired side Stack View">
+                                                <rect key="frame" x="300" y="0.0" width="200" height="51"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bP4-w4-A0i" userLabel="M2 Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="51"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-MI-yBh">
+                                                                <rect key="frame" x="38" y="0.0" width="25" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-an-Up6" userLabel="M2 Text Field">
+                                                                <rect key="frame" x="0.0" y="21" width="100" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="yPe-ZW-gBz"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l0y-My-zqD" userLabel="V2 Stack View">
+                                                        <rect key="frame" x="100" y="0.0" width="100" height="51"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdz-uu-mjO">
+                                                                <rect key="frame" x="40" y="0.0" width="21" height="21"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gfc-Ql-1dX" userLabel="V2  Text Field">
+                                                                <rect key="frame" x="0.0" y="21" width="100" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="lnK-53-nFS"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LL-by-ip9">
+                                        <rect key="frame" x="220" y="401" width="61" height="30"/>
+                                        <state key="normal" title="Caculate"/>
+                                        <connections>
+                                            <action selector="caculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6q-j4-PoU"/>
+                                            <action selector="caculateC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5jp-UU-RRD"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="la4-aV-mrw" secondAttribute="trailing" id="Z1P-SB-j1F"/>
+                                    <constraint firstItem="la4-aV-mrw" firstAttribute="leading" secondItem="y7u-eW-Jh8" secondAttribute="leading" id="kEl-h0-vRQ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="y7u-eW-Jh8" secondAttribute="trailing" constant="50" id="6ua-rQ-aBK"/>
                             <constraint firstAttribute="trailing" secondItem="79u-R6-H0S" secondAttribute="trailing" id="H2r-v5-I1i"/>
-                            <constraint firstItem="hYo-Wi-XeI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="O8H-Oe-wcj"/>
                             <constraint firstItem="79u-R6-H0S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="X6C-A2-XKd"/>
-                            <constraint firstAttribute="trailing" secondItem="hYo-Wi-XeI" secondAttribute="trailing" constant="50" id="e7O-bN-TsM"/>
-                            <constraint firstItem="hYo-Wi-XeI" firstAttribute="top" secondItem="79u-R6-H0S" secondAttribute="bottom" constant="20" id="g9e-Rb-0Ds"/>
+                            <constraint firstItem="y7u-eW-Jh8" firstAttribute="top" secondItem="79u-R6-H0S" secondAttribute="bottom" constant="20" id="azo-N9-fBE"/>
+                            <constraint firstItem="y7u-eW-Jh8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="pZL-ch-paT"/>
                             <constraint firstItem="79u-R6-H0S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qx6-BE-ZO9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="formulaTextField" destination="2zd-Zi-Oqt" id="kdV-Ov-yhs"/>
-                        <outlet property="m1TextField" destination="gHH-WV-Eyy" id="O1g-ww-T5e"/>
-                        <outlet property="m2TextField" destination="tE9-tk-L2q" id="Q3K-5Y-KuA"/>
-                        <outlet property="v1TextField" destination="IAa-Js-0KR" id="sx7-Bt-wJd"/>
-                        <outlet property="v2TextField" destination="h5I-SX-JDZ" id="nYc-OG-dzq"/>
+                        <outlet property="calcalateM" destination="wsA-JY-wS1" id="Bfk-nC-p73"/>
+                        <outlet property="formulaTextField" destination="j35-IU-I5B" id="WdT-Ur-48Y"/>
+                        <outlet property="m1TextField" destination="GN4-M3-klg" id="zcd-Wf-se7"/>
+                        <outlet property="m2TextField" destination="c2q-an-Up6" id="CDz-e3-2gF"/>
+                        <outlet property="pickMWField" destination="swX-Zg-9vv" id="xID-R4-VYX"/>
+                        <outlet property="pickMWTextField" destination="swX-Zg-9vv" id="YtQ-D9-KXb"/>
+                        <outlet property="pickMassTextField" destination="Qhs-Er-E8N" id="Bfq-te-wGx"/>
+                        <outlet property="pickVolumeTextField" destination="Weg-4f-1kC" id="2hG-vc-zWR"/>
+                        <outlet property="v1TextField" destination="0Mv-QV-uoI" id="u9D-Ki-mAd"/>
+                        <outlet property="v2TextField" destination="Gfc-Ql-1dX" id="gxw-uA-WZE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
