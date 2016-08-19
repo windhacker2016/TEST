@@ -33,7 +33,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzZ-O2-uC2" userLabel="計算分子量 Stack View">
                                         <rect key="frame" x="70" y="0.0" width="361" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g H2O" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j35-IU-I5B" userLabel="分子量 Text Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g H2O" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j35-IU-I5B" userLabel="原子量 Text Field">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="wx7-mG-2cz"/>
@@ -45,8 +45,7 @@
                                                 <rect key="frame" x="300" y="0.0" width="61" height="30"/>
                                                 <state key="normal" title="Caculate"/>
                                                 <connections>
-                                                    <action selector="calculateMW:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVQ-tb-Kvp"/>
-                                                    <action selector="formula:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1y-eM-lq7"/>
+                                                    <action selector="calculateMW:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QVn-aX-hBS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -129,11 +128,11 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsA-JY-wS1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsA-JY-wS1">
                                         <rect key="frame" x="220" y="220" width="61" height="30"/>
                                         <state key="normal" title="Caculate"/>
                                         <connections>
-                                            <action selector="calculateM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DgQ-fD-NVV"/>
+                                            <action selector="calculateM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c84-ft-XPv"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="la4-aV-mrw" userLabel="濃度換算公式 Stack View">
@@ -237,8 +236,7 @@
                                         <rect key="frame" x="220" y="401" width="61" height="30"/>
                                         <state key="normal" title="Caculate"/>
                                         <connections>
-                                            <action selector="caculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6q-j4-PoU"/>
-                                            <action selector="caculateC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5jp-UU-RRD"/>
+                                            <action selector="calculateCon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VG-R7-24C"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -259,16 +257,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="calcalateM" destination="wsA-JY-wS1" id="Bfk-nC-p73"/>
-                        <outlet property="formulaTextField" destination="j35-IU-I5B" id="WdT-Ur-48Y"/>
-                        <outlet property="m1TextField" destination="GN4-M3-klg" id="zcd-Wf-se7"/>
-                        <outlet property="m2TextField" destination="c2q-an-Up6" id="CDz-e3-2gF"/>
-                        <outlet property="pickMWField" destination="swX-Zg-9vv" id="xID-R4-VYX"/>
-                        <outlet property="pickMWTextField" destination="swX-Zg-9vv" id="YtQ-D9-KXb"/>
-                        <outlet property="pickMassTextField" destination="Qhs-Er-E8N" id="Bfq-te-wGx"/>
-                        <outlet property="pickVolumeTextField" destination="Weg-4f-1kC" id="2hG-vc-zWR"/>
-                        <outlet property="v1TextField" destination="0Mv-QV-uoI" id="u9D-Ki-mAd"/>
-                        <outlet property="v2TextField" destination="Gfc-Ql-1dX" id="gxw-uA-WZE"/>
+                        <outlet property="formulaTextField" destination="j35-IU-I5B" id="qBb-gl-Hlm"/>
+                        <outlet property="m1TextField" destination="GN4-M3-klg" id="iVD-qH-MMv"/>
+                        <outlet property="m2TextField" destination="c2q-an-Up6" id="dNp-zW-Tg2"/>
+                        <outlet property="pickMWTextField" destination="swX-Zg-9vv" id="aww-a1-DD5"/>
+                        <outlet property="pickMassTextField" destination="Qhs-Er-E8N" id="nyT-xR-ybS"/>
+                        <outlet property="pickVolumeTextField" destination="Weg-4f-1kC" id="MBi-bh-Od8"/>
+                        <outlet property="v1TextField" destination="0Mv-QV-uoI" id="wOW-Kp-6nO"/>
+                        <outlet property="v2TextField" destination="Gfc-Ql-1dX" id="2IR-hU-IEs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
