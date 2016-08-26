@@ -43,6 +43,10 @@ class ViewController: UIViewController {
         }
         findMolecularWeight(formulaTextField.text!)
     
+        for molecularFormula in formulaTextField.text!.characters {
+            print(molecularFormula)
+        }
+        
         
     }
     
